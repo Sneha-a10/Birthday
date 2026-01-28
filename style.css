@@ -1,0 +1,131 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    /* White bg as requested */
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}
+
+.scene {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.scene.active {
+    display: flex;
+    opacity: 1;
+}
+
+.cat-img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.action-btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #ff4757;
+    transform: scale(1.05);
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+.clickable {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.clickable:hover {
+    transform: scale(1.02);
+}
+
+.hint {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+}
+
+#replay-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+#replay-btn.hidden {
+    display: none;
+}
+
+.small-cat {
+    max-width: 150px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scene.active>* {
+    animation: fadeIn 0.8s ease-out forwards;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="scene-1" class="scene active">
+        <img src="assets/cat1.png" alt="Cat saying Hello Love" class="cat-img">
+        <h1>hello love</h1>
+        <button id="hie-btn" class="action-btn">Hie</button>
+    </div>
+
+    <div id="scene-2" class="scene">
+        <img src="assets/cat2.png" alt="Cat saying I have something for you" class="cat-img">
+        <h1>I have something for you</h1>
+        <button id="show-btn" class="action-btn">Show</button>
+    </div>
+
+    <div id="scene-3" class="scene">
+        <img src="assets/cat3.png" alt="Cat saying Wait right here" class="cat-img">
+        <h1>wait right here</h1>
+    </div>
+
+    <div id="scene-4" class="scene">
+        <img src="assets/cat4.png" alt="Cat saying Take" class="cat-img clickable" id="cat4-img">
+        <h1>Take</h1>
+        <p class="hint">(tap the cat)</p>
+    </div>
+
+    <div id="scene-5" class="scene">
+        <div class="video-container">
+            <!-- Replace 'src' with your actual video file later -->
+            <video id="bday-video" width="300" height="500" controls>
+                <source src="assets/Bhu.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="replay-btn" class="action-btn hidden">Replay ↺</button>
+        </div>
+        <img src="assets/cat5.png" alt="Happy Cat" class="cat-img small-cat">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
